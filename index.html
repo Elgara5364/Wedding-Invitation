@@ -7,9 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Lato:wght@100;300;400;700;900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- simply countdown  -->
+    <script src="countdown/simplyCountdown.min.js"></script>
     <title>steve-yola-wedding-invitation</title>
   </head>
   <body>
@@ -27,8 +30,8 @@
           <div class="cpengantin">
             <h3>steve</h3>
             <h3>&</h3>
-            <h3>yola</h3>
-            <h2>Tanggal dan Waktu</h2>
+            <h3>yolanda</h3>
+            <h2>06 November 2023</h2>
           </div>
         </div>
       </div>
@@ -77,16 +80,40 @@
 
     <!-- GALLERY START -->
     <div class="gallery">
-      <h1>Foto Kami berdua</h1>
+      <h1>Gallery</h1>
       <div class="photo">
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
-        <img src="" alt="" />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
+        <img
+          src="assets/gallery/WhatsApp Image 2022-04-11 at 12.23.19 AM.jpeg"
+          alt=""
+        />
       </div>
     </div>
     <!-- GALLERY END -->
@@ -97,7 +124,8 @@
       <div class="sub-main">
         <div class="desc">
           <h2>06 November 2023</h2>
-          <h2>17.00</h2>
+          <h2>17.00 WITA</h2>
+          <div class="simply-countdown"></div>
         </div>
         <div class="photo">
           <img src="" alt="" />
@@ -106,6 +134,10 @@
       <div class="maps"></div>
     </div>
     <!-- MAIN SCHEDULE END  -->
+
+    <!-- LOKASI PERNIKAHAN START -->
+    <div class="lwedding"></div>
+    <!-- END LOKASI PERNIKAHAN  -->
 
     <!-- MAIN LIVE STREAMING START  -->
     <div class="main-ls">
@@ -120,5 +152,32 @@
     <!-- UCAPAN DAN DOA START -->
 
     <!-- UCAPAN DAN DOA END  -->
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2023, // required
+        month: 11, // required
+        day: 6, // required
+        hours: 16, // Default is 0 [0-23] integer
+        minutes: 0, // Default is 0 [0-59] integer
+        seconds: 0, // Default is 0 [0-59] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari" },
+          hours: { singular: "jam" },
+          minutes: { singular: "menit" },
+          seconds: { singular: "detik" },
+        },
+        plural: false, //use plurals
+        inline: false, //set to true to get an inline basic countdown like : 24 days, 4 hours, 2 minutes, 5 seconds
+        inlineClass: "simply-countdown-inline", //inline css span class in case of inline = true
+        // in case of inline set to false
+        enableUtc: false,
+        onEnd: function () {
+          // your code
+          return;
+        },
+      });
+    </script>
   </body>
 </html>

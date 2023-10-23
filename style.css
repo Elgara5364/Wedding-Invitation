@@ -6,21 +6,28 @@ a {
   margin: 0;
   text-decoration: none;
   color: black;
+  font-family: "Lato", sans-serif;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: 700;
+  /* padding-bottom: 25px; */
 }
 
 /* START HEADER  */
 
 .header {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 100%;
-  height: 1000px;
+  height: 600px;
   background-image: url(assets/DSC_0065.JPG);
   background-size: cover;
   background-position: center;
 }
 
 .sub-head {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 1280px;
   height: auto;
   margin: 10px auto;
@@ -41,26 +48,24 @@ a {
 
 .header .desc {
   width: 100%;
-  height: 350px;
   margin: 40px 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 45px;
-}
-.header .desc .cpengantin h3 {
-  /* jenis huruf, ukuran, ketebalan, jarak antara huruf  */
-  font-size: 50px;
-  padding: 10px;
+  font-size: 25px;
 }
 
-.header .desc .cpengantin h3:nth-child(3) {
-  padding-bottom: 15px;
+.header .desc .cpengantin h3 {
+  /* jenis huruf, ukuran, ketebalan, jarak antara huruf  */
+  font-family: "Dancing Script", cursive;
+  font-size: 70px;
+  padding: 25px 3px 3px;
+  text-transform: capitalize;
 }
 
 .header .desc .cpengantin h2 {
   padding-top: 30px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /* END HEADER  */
@@ -68,7 +73,7 @@ a {
 /* SUB HEAD START  */
 .sub-head {
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   max-width: 1280px;
   margin: auto;
   text-align: center;
@@ -86,7 +91,7 @@ a {
 /* MAIN CP START  */
 .main-cp {
   box-sizing: border-box;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 1280px;
   margin: 10px auto;
   padding: 45px 0px;
@@ -95,6 +100,7 @@ a {
 .main-cp h2 {
   text-align: center;
   font-size: 45px;
+  padding-bottom: 20px;
 }
 
 .main-cp .couple {
@@ -114,6 +120,7 @@ a {
 
 .main-cp .couple img {
   width: 20px;
+  /* border: 1px solid black; */
 }
 
 .main-cp .couple .female {
@@ -124,20 +131,48 @@ a {
   text-align: right;
 }
 
+.main-cp .couple .male img,
+.main-cp .couple .female img {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 30px auto 10px;
+}
+
 .main-cp .couple h3 {
   font-size: 30px;
+  font-family: "Dancing Script", cursive;
+  text-transform: capitalize;
 }
 
 /* END MAIN CPT START  */
 
 /* START GALLERY  */
 .gallery {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 1280px;
-  height: 100px;
+  height: auto;
+  padding: 30px 0 50px;
   margin: auto;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.gallery .photo {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gallery .photo img {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
 }
 /* END GALLERY  */
 
@@ -148,7 +183,54 @@ a {
   margin: 10px auto;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
+
+.main-sch .sub-main .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-sch .sub-main .desc p {
+  font-size: 25px;
+}
+
+.simply-countdown {
+  overflow: hidden;
+  display: table;
+  font-family: "Lato", sans-serif;
+  margin: auto;
+}
+.simply-countdown > .simply-section {
+  width: 50px;
+  height: 50px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  margin: 10px;
+  background: #cce5e5;
+  box-shadow: 0 1px 3px rgba(78, 60, 60, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 20%;
+}
+.simply-countdown > .simply-section .simply-amount,
+.simply-countdown > .simply-section .simply-word {
+  display: block;
+  text-align: center;
+}
+
+.simply-amount {
+  font-size: 2rem;
+}
+
+.simply-word {
+  font-size: 1.2rem;
+}
+
 /* END MAIN SCHEDULE  */
 
 /* START MAIN LIVE STREAMING */
