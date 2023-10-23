@@ -92,70 +92,40 @@ h1 {
   background-position: center;
 }
 
-.sub-head {
-  /* border: 1px solid black; */
-  width: 1280px;
-  height: auto;
-  margin: 10px auto;
-  padding: 20px 80px;
-}
-
 .header .offcanvas-body,
 .header .offcanvas-body .offcanvas-end {
   background-color: var(--white) !important;
 }
 
-.header .offcanvas-body .offcanvas-end .offcanvas-header {
-  font-size: 3rem !important;
-  text-align: right !important;
-  display: block !important;
-  position: relative !important;
-  left: 250px !important;
-}
-
 .header .offcanvas-body .offcanvas-end ul li {
   padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 2rem !important;
+  position: relative;
 }
 
 .header .navbar {
   width: 100%;
-  padding: 20px 0px;
+  padding: 5px 0px;
   display: flex;
   justify-content: flex-start;
   gap: 30px;
 }
 
 .header .navbar a {
-  font-size: 20px;
+  font-size: 0.9rem;
   text-decoration: none !important;
   color: inherit !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 /* END HEADER  */
-
-/* SUB HEAD START  */
-.sub-head {
-  box-sizing: border-box;
-  /* border: 1px solid black; */
-  max-width: 1280px;
-  margin: auto;
-  text-align: center;
-  padding: 35px 5px;
-}
-
-.sub-head .text {
-  width: 70%;
-  margin: auto;
-  line-height: 1.5;
-  font-size: 20px;
-}
-/* SUB HEAD END  */
 
 /* MAIN CP START  */
 .main-cp {
   box-sizing: border-box;
   /* border: 1px solid black; */
-  width: 1280px;
+  max-width: 1280px;
   margin: 10px auto;
   padding: 45px 0px;
 }
@@ -167,15 +137,17 @@ h1 {
 }
 
 .main-cp .couple {
-  width: 700px;
+  max-width: 80%;
   margin: auto;
   display: flex;
-  padding: 0 200px;
-  justify-content: space-between;
+  padding: 0 2rem;
+  justify-content: space-around;
+  gap: 2rem;
+  text-align: center;
 }
 
 .main-cp .couple .male {
-  width: 200px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -183,38 +155,58 @@ h1 {
 
 .main-cp .couple img {
   width: 20px;
+  border-radius: 100%;
+
   /* border: 1px solid black; */
 }
 
 .main-cp .couple .female {
-  width: 250px;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 7px;
-  text-align: right;
+  /* margin: 0px 50px; */
 }
 
 .main-cp .couple .male img,
 .main-cp .couple .female img {
-  width: 200px;
-  height: 200px;
-  border: 1px solid black;
-  border-radius: 10px;
+  width: 15rem;
+  height: 15rem;
+  /* border: 1px solid black; */
+
   margin: 30px auto 10px;
 }
 
 .main-cp .couple h3 {
-  font-size: 30px;
+  font-size: 3rem;
   font-family: "Dancing Script", cursive;
   text-transform: capitalize;
 }
 
 /* END MAIN CPT START  */
 
+/* SUB HEAD START  */
+.sub-head {
+  max-width: 100%;
+  text-align: center;
+}
+
+.sub-head .text {
+  max-width: 58%;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.sub-head .text h2 {
+  font-size: 1.69rem;
+  font-family: "Poppins", sans-serif !important;
+}
+/* SUB HEAD END  */
+
 /* START GALLERY  */
 .gallery {
   /* border: 1px solid black; */
-  width: 1280px;
+  max-width: 1280px;
   height: auto;
   padding: 30px 0 50px;
   margin: auto;
@@ -242,7 +234,7 @@ h1 {
 /* START MAIN SCHEDULE  */
 .main-sch {
   border: 1px solid black;
-  width: 1280px;
+  max-width: 1280px;
   margin: 10px auto;
   text-align: center;
   box-sizing: border-box;
@@ -299,7 +291,7 @@ h1 {
 /* START MAIN LIVE STREAMING */
 .main-ls {
   border: 1px solid black;
-  width: 1280px;
+  max-width: 1280px;
   margin: 10px auto;
   padding: 20px 10px;
   text-align: center;
@@ -331,5 +323,22 @@ h1 {
 @media screen and (max-width: 576px) {
   html {
     font-size: 60%;
+  }
+  .main-cp .couple {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-cp .couple .img img {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .main-cp .couple h3 {
+    font-size: 3.5rem;
+  }
+
+  .main-cp .couple p {
+    font-size: 1.5rem;
   }
 }
