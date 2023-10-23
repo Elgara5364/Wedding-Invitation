@@ -40,9 +40,9 @@ h1 {
 
 .invitation {
   /* position: relative; */
-  min-height: 100vh;
   /* max-width: 100vw; */
   /* background-color: var(--bg); */
+  min-height: 100vh;
   background-image: url(assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg) !important;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -86,7 +86,7 @@ h1 {
 .header {
   /* border: 1px solid black; */
   width: 100%;
-  height: 600px;
+  height: auto;
   background-image: url(assets/DSC_0065.JPG);
   background-size: cover;
   background-position: center;
@@ -98,6 +98,23 @@ h1 {
   height: auto;
   margin: 10px auto;
   padding: 20px 80px;
+}
+
+.header .offcanvas-body,
+.header .offcanvas-body .offcanvas-end {
+  background-color: var(--white) !important;
+}
+
+.header .offcanvas-body .offcanvas-end .offcanvas-header {
+  font-size: 3rem !important;
+  text-align: right !important;
+  display: block !important;
+  position: relative !important;
+  left: 250px !important;
+}
+
+.header .offcanvas-body .offcanvas-end ul li {
+  padding-left: 10px;
 }
 
 .header .navbar {
@@ -112,28 +129,6 @@ h1 {
   font-size: 20px;
   text-decoration: none !important;
   color: inherit !important;
-}
-
-.header .desc {
-  width: 100%;
-  margin: 40px 0px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  font-size: 25px;
-}
-
-.header .desc .cpengantin h3 {
-  /* jenis huruf, ukuran, ketebalan, jarak antara huruf  */
-  font-family: "Dancing Script", cursive;
-  font-size: 70px;
-  padding: 25px 3px 3px;
-  text-transform: capitalize;
-}
-
-.header .desc .cpengantin h2 {
-  padding-top: 30px;
-  font-size: 20px;
 }
 
 /* END HEADER  */
