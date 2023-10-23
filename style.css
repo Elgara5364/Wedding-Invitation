@@ -1,7 +1,16 @@
+:root {
+  --dark: #4a4e69;
+  --white: #f2e9e4;
+  --choc: #c9ada7;
+  --bg: #22223b;
+  --shadow: 0 2px 2px #807e7f;
+}
+
 *,
 body,
 html,
 a {
+  font-size: 1.2rem; /*16 * 1.2px */
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -12,8 +21,61 @@ a {
 h1 {
   font-size: 45px;
   font-weight: 700;
-  /* padding-bottom: 25px; */
 }
+
+/* START INVITATION  */
+.invitation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.invitation {
+  position: relative;
+  min-height: 100vh;
+  /* max-width: 100vw; */
+  /* background-color: var(--bg); */
+}
+
+.invitation main,
+.invitation p {
+  color: var(--dark);
+}
+
+.invitation main h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 6rem;
+  text-shadow: var(--shadow);
+}
+
+.invitation main h4 {
+  font-size: 1.6rem;
+}
+
+.invitation main p {
+  font-size: 1.5rem;
+}
+
+.invitation main a {
+  margin-top: 20px;
+  color: var(--white);
+  background-color: var(--dark);
+  transition: 0.3s;
+}
+.invitation main a:hover {
+  color: var(--dark);
+  background-color: var(--white);
+}
+
+/* END INVITATION  */
 
 /* START HEADER  */
 
@@ -44,6 +106,8 @@ h1 {
 
 .header .navbar a {
   font-size: 20px;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 
 .header .desc {
@@ -250,3 +314,23 @@ h1 {
 /* START UCAPAN DAN DOA  */
 
 /* END UCAPAN DAN DOA  */
+
+/* MEDIA QUERY  */
+/* LAPTOP  */
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* TABLET  */
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 65%;
+  }
+}
+/* MOBILE PHONE  */
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 60%;
+  }
+}
