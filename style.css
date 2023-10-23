@@ -43,7 +43,10 @@ h1 {
   min-height: 100vh;
   /* max-width: 100vw; */
   /* background-color: var(--bg); */
-  background-image: url(assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg);
+  background-image: url(assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .invitation main,
