@@ -27,6 +27,13 @@ h6 {
   margin-bottom: 0 !important;
 }
 
+.hero {
+  background-image: url(assets/1667.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 10;
+}
 /* START INVITATION  */
 /* .invitation::before {
   content: "";
@@ -86,6 +93,15 @@ h6 {
 /* END INVITATION  */
 
 /* START NAVBAR  */
+.fnavbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.fnavbar .offcanvas {
+  height: 100vh;
+}
+
 .navbar .container h3,
 .offcanvas-header h5 {
   font-family: "Dancing Script", cursive;
@@ -94,6 +110,7 @@ h6 {
 
 .offcanvas-header h5 {
   font-size: 3rem;
+  padding-top: 0;
 }
 /* END NAVBAR  */
 
@@ -137,10 +154,14 @@ h6 {
   /* border: 1px solid black; */
 }
 
-.main-cp .couple .heart .fa-beat {
-  font-size: 6.5rem;
+.main-cp .couple .heart {
   position: relative;
-  top: 100px;
+}
+
+.main-cp .couple .heart .fa-beat {
+  font-size: 4rem;
+  position: relative;
+  top: 7.5rem;
 }
 
 .main-cp .couple .male img,
@@ -297,6 +318,16 @@ h6 {
   html {
     font-size: 75%;
   }
+
+  .main-cp .couple {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-around;
+    gap: 3.7rem;
+    text-align: center;
+  }
 }
 /* TABLET  */
 @media screen and (max-width: 768px) {
@@ -305,9 +336,14 @@ h6 {
   }
 
   .main-cp .couple .heart .fa-beat {
-    font-size: 4rem;
-    position: relative;
-    bottom: 50px;
+    font-size: 3.5rem;
+    position: absolute;
+    left: -1.1rem;
+    top: 90px;
+  }
+
+  .sticky-top {
+    overflow: hidden;
   }
 }
 /* MOBILE PHONE  */
@@ -341,6 +377,7 @@ h6 {
   .main-cp .couple .heart .fa-beat {
     font-size: 4rem;
     position: relative;
-    top: 10px;
+    top: 0.8rem;
+    left: 0.2rem;
   }
 }
