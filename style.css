@@ -120,7 +120,7 @@ h6 {
   /* border: 1px solid black; */
   max-width: 1280px;
   margin: 10px auto;
-  padding: 45px 0px;
+  padding: 1.5rem 0px;
 }
 
 .main-cp h2 {
@@ -181,53 +181,12 @@ h6 {
 
 /* END MAIN CP START  */
 
-/* SUB HEAD START  */
-.sub-head {
-  max-width: 100%;
-  text-align: center;
-}
-
-.sub-head .text {
-  max-width: 58%;
-  margin: auto;
-  line-height: 1.5;
-}
-
-.sub-head .text h2 {
-  font-size: 1.69rem;
-  font-family: "Poppins", sans-serif !important;
-}
-/* SUB HEAD END  */
-
-/* START LOCATION  */
-.location {
-  max-width: 70%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 3rem;
-  align-items: center;
-  gap: 25px;
-  text-align: center;
-  word-spacing: 2px;
-}
-
-.location h1 {
-  padding-top: 2rem;
-  text-align: center;
-}
-
-.location .maps iframe {
-  max-width: 100%;
-}
-/* END LOCATION  */
-
 /* START GALLERY  */
 .gallery {
   /* border: 1px solid black; */
   max-width: 1280px;
   height: auto;
-  padding: 3rem 0 50px;
+  padding: 1.5rem 0 50px;
   margin: auto;
   text-align: center;
   box-sizing: border-box;
@@ -238,6 +197,7 @@ h6 {
 
 .gallery h1 {
   padding-top: 40px;
+  font-size: 3rem;
 }
 
 .gallery .photo {
@@ -254,46 +214,83 @@ h6 {
 }
 /* END GALLERY  */
 
-/* START MAIN SCHEDULE  */
-.main-sch {
-  border: 1px solid black;
+/* SUB HEAD START  */
+.sub-head {
+  max-width: 100%;
+  text-align: center;
+  padding: 45px 0 45px;
+}
+
+.sub-head .text {
+  max-width: 58%;
+  margin: auto;
+  line-height: 1.5;
+}
+
+.sub-head .text h2 {
+  font-size: 1.69rem;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 400;
+}
+/* SUB HEAD END  */
+
+/* START INFORMASI MAIN SCH  */
+
+.info .main-sch {
   max-width: 1280px;
   margin: 10px auto;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  padding: 3.7rem 0px 0px;
 }
 
-.main-sch .sub-main .desc {
+.info .main-sch .desc {
+  width: 30rem;
+  height: 6rem;
+  margin: auto;
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 15px;
 }
-
-.main-sch .sub-main .desc p {
-  font-size: 25px;
+.info .main-sch h1 {
+  padding-bottom: 3rem;
 }
 
-.simply-countdown {
+.main-sch .desc h2 {
+  font-size: 1.2rem;
+}
+
+.info .main-sch .simply-countdown {
   overflow: hidden;
   display: table;
   font-family: "Lato", sans-serif;
   margin: auto;
+  height: 3rem;
 }
+
+.simply-countdown > .simply-section .simply-amount {
+  font-family: "Poppins", sans-serif;
+  font-size: 6rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-weight: 200;
+}
+
+.simply-countdown > .simply-days-section .simply-word {
+  font-family: "Poppins", sans-serif;
+  padding: 0;
+  font-weight: 800;
+}
+
 .simply-countdown > .simply-section {
-  width: 50px;
-  height: 50px;
-  padding: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   margin: 10px;
-  background: #cce5e5;
-  box-shadow: 0 1px 3px rgba(78, 60, 60, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  border-radius: 20%;
 }
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
@@ -301,27 +298,75 @@ h6 {
   text-align: center;
 }
 
+.simply-countdown2 {
+  width: 30%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  gap: 15px;
+  justify-content: space-around;
+  padding-bottom: 1.5rem;
+}
+
+.simply-countdown > .simply-seconds-section,
+.simply-countdown > .simply-minutes-section,
+.simply-countdown > .simply-hours-section,
+.simply-countdown2 > .simply-days-section {
+  display: none;
+}
+
 .simply-amount {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  height: 2.5rem;
+  display: block;
   font-size: 2rem;
 }
 
 .simply-word {
+  font-weight: 700;
   font-size: 1.2rem;
 }
 
-/* END MAIN SCHEDULE  */
+/* END INFORMASI MAIN SCH  */
+/* START INFORMASI LOKASI  */
+.info .location {
+  max-width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 1rem; */
+  align-items: center;
+  gap: 25px;
+  text-align: center;
+  word-spacing: 2px;
+}
+
+.info .location h1 {
+  padding-top: 3rem;
+  text-align: center;
+}
+
+.info .location .maps iframe {
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 10px 0px 50px;
+}
+/* END INFORMASI LOCATION  */
+/* END INFORMASI  */
 
 /* START MAIN LIVE STREAMING */
 .main-ls {
   border: 1px solid black;
   max-width: 1280px;
   margin: 10px auto;
-  padding: 20px 10px;
+  padding: 5rem 10px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
+  height: 50rem;
 }
 /* END MAIN LIVE STREAMING  */
 
