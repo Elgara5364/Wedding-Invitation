@@ -34,25 +34,8 @@ h6 {
   background-size: cover;
   z-index: 10;
 }
-/* START INVITATION  */
-/* .invitation::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  z-index: -1;
-} */
 
 .invitation {
-  /* position: relative; */
-  /* max-width: 100vw; */
-  /* background-color: var(--bg); */
   min-height: 100vh;
   background-image: url(assets/foto-pettine-IfjHaIoAoqE-unsplash.jpg) !important;
   background-repeat: no-repeat !important;
@@ -80,6 +63,7 @@ h6 {
 }
 
 .invitation main a {
+  border: 1px solid #22223b !important;
   margin-top: 20px;
   color: var(--white);
   background-color: var(--dark);
@@ -88,6 +72,11 @@ h6 {
 .invitation main a:hover {
   color: var(--dark);
   background-color: var(--white);
+}
+
+.invitation main a:active {
+  background-color: var(--shadow) !important;
+  color: var(--dark) !important;
 }
 
 /* END INVITATION  */
@@ -112,6 +101,18 @@ h6 {
   font-size: 3rem;
   padding-top: 0;
 }
+
+.navbar .offcanvas-body .nav-item a {
+  font-size: 1.2rem !important;
+  padding: 0px 1rem;
+  transition: 0.3s;
+}
+
+.navbar .offcanvas-body .nav-item a:hover {
+  font-size: 1.4rem !important;
+  transition: font-size 0.3s !important;
+}
+
 /* END NAVBAR  */
 
 /* MAIN CP START  */
@@ -138,13 +139,6 @@ h6 {
   justify-content: space-around;
   gap: 2rem;
   text-align: center;
-}
-
-.main-cp .couple .male,
-.main-cp .couple .female {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
 }
 
 .main-cp .couple img {
@@ -216,6 +210,7 @@ h6 {
 
 /* SUB HEAD START  */
 .sub-head {
+  background-color: var(--choc);
   max-width: 100%;
   text-align: center;
   padding: 45px 0 45px;
@@ -228,6 +223,7 @@ h6 {
 }
 
 .sub-head .text h2 {
+  color: #22223b;
   font-size: 1.69rem;
   font-family: "Poppins", sans-serif !important;
   font-weight: 400;
@@ -237,18 +233,22 @@ h6 {
 /* START INFORMASI MAIN SCH  */
 
 .info .main-sch {
-  max-width: 1280px;
-  margin: 10px auto;
+  background-image: url(assets/frame/Lovepik_com-380120107-frame-clipart-green-leaf-vines-summer-border-botany.png);
+  background-position: center;
+  background-size: 90% 195%;
+  background-repeat: no-repeat;
+  margin: 4rem auto 0;
+  max-width: 80%;
   text-align: center;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 3.7rem 0px 0px;
+  padding: 3.7rem 0px;
+  box-sizing: border-box;
 }
 
 .info .main-sch .desc {
   width: 30rem;
-  height: 6rem;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -256,7 +256,8 @@ h6 {
   gap: 15px;
 }
 .info .main-sch h1 {
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
+  font-size: 3rem;
 }
 
 .main-sch .desc h2 {
@@ -296,6 +297,7 @@ h6 {
 .simply-countdown > .simply-section .simply-word {
   display: block;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .simply-countdown2 {
@@ -306,6 +308,12 @@ h6 {
   gap: 15px;
   justify-content: space-around;
   padding-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.simply-countdown2 .simply-word {
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .simply-countdown > .simply-seconds-section,
@@ -345,9 +353,11 @@ h6 {
 .info .location h1 {
   padding-top: 3rem;
   text-align: center;
+  font-size: 3rem;
 }
 
 .info .location .maps iframe {
+  border: 1px solid var(--dark) !important;
   max-width: 100%;
   border-radius: 10px;
   padding: 10px 0px 50px;
@@ -357,16 +367,31 @@ h6 {
 
 /* START MAIN LIVE STREAMING */
 .main-ls {
-  border: 1px solid black;
-  max-width: 1280px;
+  background-image: url(assets/frame/Lovepik_com-380120107-frame-clipart-green-leaf-vines-summer-border-botany.png);
+  background-position: center;
+  background-size: 90% 150%;
+  background-repeat: no-repeat;
+  max-width: 100%;
   margin: 10px auto;
-  padding: 5rem 10px 20px;
+  padding: 5rem 10px 5rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
-  height: 50rem;
+}
+
+.main-ls .btn {
+  border: 1px solid #22223b !important;
+  border-radius: 5px;
+  color: var(--white);
+  background-color: var(--bg);
+}
+
+.main-ls .btn:hover {
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--bg);
 }
 /* END MAIN LIVE STREAMING  */
 
@@ -376,6 +401,17 @@ h6 {
 
 /* MEDIA QUERY  */
 /* LAPTOP  */
+
+@media screen and (min-width: 993px) {
+  .main-cp .couple .male,
+  .main-cp .couple .female {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* gap: 7px; */
+  }
+}
+
 @media screen and (max-width: 992px) {
   html {
     font-size: 75%;
@@ -390,11 +426,27 @@ h6 {
     gap: 3.7rem;
     text-align: center;
   }
+
+  .main-cp .couple .male,
+  .main-cp .couple .female {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* gap: 7px; */
+  }
 }
 /* TABLET  */
 @media screen and (max-width: 768px) {
   html {
     font-size: 65%;
+  }
+
+  .main-cp .couple .male,
+  .main-cp .couple .female {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* gap: 7px; */
   }
 
   .main-cp .couple .heart .fa-beat {
@@ -407,11 +459,27 @@ h6 {
   .sticky-top {
     overflow: hidden;
   }
+
+  .navbar .offcanvas-body .nav-item a:hover {
+    padding: 1rem 0;
+    transition: 0.4s;
+  }
 }
 /* MOBILE PHONE  */
 @media screen and (max-width: 576px) {
   html {
     font-size: 60%;
+  }
+
+  .navbar .offcanvas-body .nav-item a:hover {
+    background-color: #f2e9e480 !important;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 0.7rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
   .main-cp .couple {
     flex-direction: column;
@@ -441,5 +509,13 @@ h6 {
     position: relative;
     top: 0.8rem;
     left: 0.2rem;
+  }
+
+  .main-cp .couple .male,
+  .main-cp .couple .female {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* gap: 7px; */
   }
 }
