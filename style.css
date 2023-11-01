@@ -518,4 +518,19 @@ h6 {
     width: 100%;
     /* gap: 7px; */
   }
+  .main-ls {
+    /* max-width: 1280px; */
+    background-image: url(assets/frame/Lovepik_com-380120107-frame-clipart-green-leaf-vines-summer-border-botany.png);
+    background-position: center;
+    background-size: 100% 195%;
+    background-repeat: no-repeat;
+  }
+
+  .info .main-sch {
+    max-width: 100%;
+    background-image: url(assets/frame/Lovepik_com-380120107-frame-clipart-green-leaf-vines-summer-border-botany.png);
+    background-position: center;
+    background-size: 100% 195%;
+    background-repeat: no-repeat;
+  }
 }
