@@ -280,7 +280,7 @@ h6 {
   background-position: center;
   background-size: 90% 195%;
   background-repeat: no-repeat;
-  background-position-x: 30%;
+  background-position-x: 25%;
   margin: 4rem auto 0;
   max-width: 80%;
   text-align: center;
@@ -417,7 +417,7 @@ h6 {
   background-position: center;
   background-size: 90% 150%;
   background-repeat: no-repeat;
-  background-position-x: 30%;
+  background-position-x: 25%;
   max-width: 100%;
   margin: 10px auto;
   padding: 5rem 10px 5rem;
@@ -645,7 +645,8 @@ hr {
     background-repeat: no-repeat;
   }
 
-  .main-ls p {
+  .main-ls p,
+  .info .main-sch h1 {
     padding: 0 10%;
   }
 
