@@ -182,15 +182,14 @@ h6 {
 
 /* START GALLERY  */
 .gallery {
-  /* border: 1px solid black; */
-  max-width: 1280px;
+  max-width: 80%;
   height: auto;
   padding: 1.5rem 0 50px;
   margin: auto;
   text-align: center;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -590,36 +589,47 @@ hr {
   }
 
   .gallery .photo img {
-    width: 28rem;
-    height: 18rem;
+    width: 80%;
+    height: auto;
     border-radius: 10px;
     transition: 0.3s;
     margin-bottom: 2rem;
   }
 
   .gallery .photo img:hover {
-    width: 32rem;
-    height: 20rem;
+    width: 100%;
+    height: auto;
     transition: width 0.3s, height 0.3s;
   }
 
   .gallery .photo .img1,
   .gallery .photo .img3 {
+    width: 40%;
+    height: auto;
     margin: 0 0 2rem;
+    transition: 0.3s;
   }
 
   .gallery .photo .img3 {
     margin-top: 2rem;
   }
+
+  .gallery .photo .img1:hover,
+  .gallery .photo .img3:hover {
+    width: 60%;
+    height: auto;
+    transition: width 0.3s, height 0.3s;
+  }
+
   .gallery .photo .img2 {
-    width: 28rem;
-    height: 16rem;
+    width: 80%;
+    height: auto;
     /* margin-bottom: 2rem; */
   }
 
   .gallery .photo .img2:hover {
-    width: 32rem;
-    height: 18rem;
+    width: 100%;
+    height: auto;
     margin: auto 0;
   }
 
