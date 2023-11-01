@@ -446,6 +446,10 @@ hr {
   left: 25%;
   width: 50%;
 }
+
+.main-ls p:last-child {
+  margin-bottom: 2rem;
+}
 /* END MAIN LIVE STREAMING  */
 
 /* START UCAPAN DAN DOA  */
