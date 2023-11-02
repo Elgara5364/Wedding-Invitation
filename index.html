@@ -41,7 +41,7 @@
           <h2>Steve & Yolanda</h2>
           <h4>Kepada Bapak/Ibu/Saudara/i</h4>
           <p>Senang Mengundang Anda untuk Hadir di Acara Pernikahan Kami</p>
-          <a href="#main-cp" class="btn btn-lg btn-primary">Buka Undangan</a>
+          <a href="#main-cp" class="btn btn-lg btn-primary" onclick="enableScroll()" >Buka Undangan</a>
         </main>
       </div>
       <!-- INVITATION END  -->
@@ -85,6 +85,9 @@
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#info">Informasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#rsvp">RSVP</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#main-ls">Link Zoom</a>
@@ -214,6 +217,50 @@
       <!-- LOCATION END  -->
 
 
+      <!-- RSVP START  -->
+      <div id="rsvp" class="rsvp">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-md-10 text-center">
+              <h1>Konfirmasi Kehadiran</h1>
+              <p>Isi form dibawah ini untuk melakukan konfirmasi kehadiran</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="row row-cols-sm-auto g-3 align-items-center justify-content-center" 
+          method="POST" 
+          action="https://script.google.com/macros/s/AKfycbxiES4cCBCKAkBFKK4j5gVvW0y0qYlYen3Y26dQn13Il25Qf8cspF9gAr1c2BmdoxH4/exec" id="my-form" >
+          <div class="col-11">
+            <div class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" class="form-control" id="nama" name ="nama">
+            </div>
+          </div>
+          <div class="col-11">
+            <div class="mb-3">
+              <label for="JumlahKehadiran" class="form-label">Jumlah</label>
+              <input type="number" class="form-control" id="jumlah" name ="jumlah" min="1" max = "20" length = "1" value="1">
+            </div>
+          </div>
+          <div class="col-11">
+            <div class="mb-3">
+              <label for="status" class="form-label">Konfirmasi</label>
+              <select name="status" id="status" class="form-select">
+                <option selected> Pilih salah satu </option>
+                <option value="hadir">Hadir</option>
+                <option value="tidak hadir">Tidak Hadir</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-11">
+            <button class="btn btn-primary">Kirim</button>
+          </div>
+        </form>
+      </div>
+      <!-- RSVP END  -->
+
+
       <!-- MAIN LIVE STREAMING START  -->
       <div class="main-ls" id="main-ls">
         <h1>Live Streaming</h1>
@@ -229,6 +276,8 @@
       <!-- UCAPAN DAN DOA END  -->
     </div>
     <!-- BOOTSTRAP JS  -->
+
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
@@ -301,6 +350,49 @@
       const offcanvas = document.querySelector('.offcanvas');
       offcanvas.addEventListener('hidden.bs.offcanvas', function() {
         stickyTop.style.overflow = 'hidden';
+      });
+    </script>
+
+    <script>
+      const rootElement = document.querySelector(":root")
+      function disableScroll() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        }
+              
+        rootElement.style.scrollBehavior = 'auto';
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {}
+        rootElement.style.scrollBehavior = 'smooth';
+        localStorage.setItem('opened', 'true')
+      }
+
+        if(!localStorage.getItem('opened')) {
+          disableScroll();
+        }
+
+    </script>
+
+    <script>
+      window.addEventListener("load", function() {
+        const form = document.getElementById('my-form');
+        form.addEventListener("submit", function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: 'POST',
+            body: data,
+          })
+          .then(() => {
+            alert("Konfirmasi berhasil!");
+          })
+        });
       });
     </script>
   </body>

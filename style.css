@@ -45,7 +45,7 @@ h6 {
 
 .invitation main {
   position: relative;
-  bottom: 10rem;
+  bottom: 9rem;
 }
 
 .invitation main,
@@ -394,10 +394,10 @@ h6 {
   gap: 25px;
   text-align: center;
   word-spacing: 2px;
+  padding: 4rem 0 3rem;
 }
 
 .info .location h1 {
-  padding-top: 3rem;
   text-align: center;
   font-size: 3rem;
 }
@@ -410,6 +410,27 @@ h6 {
 }
 /* END INFORMASI LOCATION  */
 /* END INFORMASI  */
+
+/* START RSVP  */
+.rsvp {
+  background-color: #ffb4a2;
+  padding: 3rem 0;
+}
+
+.rsvp button {
+  margin-top: 0.1rem;
+  background-color: var(--bg);
+  border: 1px solid #22223b;
+  color: var(--white);
+  margin-top: 1.3rem !important;
+}
+
+.rsvp button:hover {
+  color: var(--bg);
+  border: 1px solid #22223b;
+  background-color: var(--white);
+}
+/* END RSVP   */
 
 /* START MAIN LIVE STREAMING */
 .main-ls {
