@@ -50,7 +50,8 @@ h6 {
 }
 
 .invitation main,
-.invitation p {
+.invitation p,
+.invitation span {
   color: var(--white);
 }
 
@@ -60,7 +61,8 @@ h6 {
   text-shadow: var(--shadow);
 }
 
-.invitation main h4 {
+.invitation main h4,
+span {
   font-size: 1.6rem;
 }
 
@@ -494,16 +496,28 @@ hr {
 /* FOOTER END  */
 
 /* AUDIO START  */
-.audio-icon-wrapper {
+.audio-icon-wrapper i {
   width: 3rem;
   height: 3rem;
   font-size: 3rem;
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 1.5rem;
+  right: 1rem;
   cursor: pointer;
+  color: white;
   opacity: 0.5;
   mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 /* AUDIO END  */
 
