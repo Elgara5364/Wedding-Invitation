@@ -414,14 +414,7 @@ h6 {
 /* START RSVP  */
 .rsvp {
   background-color: #ffb4a2;
-  padding: 3rem 0;
-}
-
-.rsvp button {
-  margin-top: 0.1rem;
-  background-color: var(--bg);
-  border: 1px solid #22223b;
-  color: var(--white);
+  padding: 3rem 0 5rem;
   margin-top: 1.3rem !important;
 }
 
