@@ -28,6 +28,7 @@ h6 {
 }
 
 .hero {
+  /* width: 100%; */
   background-image: url(assets/1667-[Converted].png);
   background-position: center;
   background-repeat: no-repeat;
@@ -123,7 +124,6 @@ h6 {
 /* MAIN CP START  */
 .main-cp {
   box-sizing: border-box;
-  /* border: 1px solid black; */
   max-width: 1280px;
   margin: 10px auto;
   padding: 1.5rem 0px;
@@ -415,7 +415,14 @@ h6 {
 .rsvp {
   background-color: #ffb4a2;
   padding: 3rem 0 5rem;
-  margin-top: 1.3rem !important;
+  width: 100%;
+}
+
+.rsvp button {
+  margin: 1.3rem auto 0 !important;
+  background-color: var(--bg);
+  border: 1px solid #22223b;
+  color: var(--white);
 }
 
 .rsvp button:hover {
@@ -469,6 +476,36 @@ hr {
 /* START UCAPAN DAN DOA  */
 
 /* END UCAPAN DAN DOA  */
+
+/* FOOTER START  */
+.footer {
+  width: 100%;
+  background-color: #ffb4a2;
+  height: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer .copyright h6 {
+  font-size: 0.8rem;
+}
+/* FOOTER END  */
+
+/* AUDIO START  */
+.audio-icon-wrapper {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+}
+/* AUDIO END  */
 
 /* MEDIA QUERY  */
 /* LAPTOP  */

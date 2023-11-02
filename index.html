@@ -31,10 +31,9 @@
   </head>
   <body>
     <div class="hero">
-      <audio src="audio/Wedding Entrance X Beautiful In White (WITH CHORDS) - Piano Cover by James Wong.mp3" autoplay loop></audio>
       <!-- INVITATION START  -->
       <div
-        class="invitation w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center"
+        class="invitation w-100 h-100  mx-auto text-center d-flex justify-content-center align-items-center"
       >
         <main>
           <h1>Undangan Pernikahan</h1>
@@ -228,35 +227,35 @@
           </div>
         </div>
 
-        <form class="row row-cols-sm-auto g-3 align-items-center justify-content-center" 
-          method="POST" 
-          action="https://script.google.com/macros/s/AKfycbxiES4cCBCKAkBFKK4j5gVvW0y0qYlYen3Y26dQn13Il25Qf8cspF9gAr1c2BmdoxH4/exec" id="my-form" >
-          <div class="col-11">
-            <div class="mb-3">
-              <label for="nama" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="nama" name ="nama">
+        <div class="container">
+          <form class="row row-cols-sm-auto g-3 align-items-center justify-content-center" method="POST" action="https://script.google.com/macros/s/AKfycbxiES4cCBCKAkBFKK4j5gVvW0y0qYlYen3Y26dQn13Il25Qf8cspF9gAr1c2BmdoxH4/exec" id="my-form" >
+            <div class="col-11">
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name ="nama">
+              </div>
             </div>
-          </div>
-          <div class="col-11">
-            <div class="mb-3">
-              <label for="JumlahKehadiran" class="form-label">Jumlah</label>
-              <input type="number" class="form-control" id="jumlah" name ="jumlah" min="1" max = "20" length = "1" value="1">
+            <div class="col-11">
+              <div class="mb-3">
+                <label for="JumlahKehadiran" class="form-label">Jumlah</label>
+                <input type="number" class="form-control" id="jumlah" name ="jumlah" min="1" max = "20" length = "1" value="1">
+              </div>
             </div>
-          </div>
-          <div class="col-11">
-            <div class="mb-3">
-              <label for="status" class="form-label">Konfirmasi</label>
-              <select name="status" id="status" class="form-select">
-                <option selected> Pilih salah satu </option>
-                <option value="hadir">Hadir</option>
-                <option value="tidak hadir">Tidak Hadir</option>
-              </select>
+            <div class="col-11">
+              <div class="mb-3">
+                <label for="status" class="form-label">Konfirmasi</label>
+                <select name="status" id="status" class="form-select">
+                  <option selected> Pilih salah satu </option>
+                  <option value="hadir">Hadir</option>
+                  <option value="tidak hadir">Tidak Hadir</option>
+                </select>
+              </div>
             </div>
-          </div>
-          <div class="col-11">
-            <button class="btn btn-primary">Kirim</button>
-          </div>
-        </form>
+            <div class="col-11">
+              <button class="btn btn-primary">Kirim</button>
+            </div>
+          </form>
+        </div>
       </div>
       <!-- RSVP END  -->
 
@@ -274,6 +273,29 @@
       <!-- UCAPAN DAN DOA START -->
 
       <!-- UCAPAN DAN DOA END  -->
+
+      <!-- FOOTER START -->
+      <div class="footer">
+        <div class="container">
+          <div class="copyright">
+            <h6>Copyright by &copy;Loave 2023</h6>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER END  -->
+    
+
+    <!-- Audio Start  -->
+      <div id="audio-container">
+        <audio id="song" autoplay loop>
+          <source src="assets/audio/Wedding Entrance X Beautiful In White (WITH CHORDS) - Piano Cover by James Wong.mp3" type="audio/mp3">
+        </audio>
+        <div class="audio-icon-wrapper">
+          <i class="bi bi-disc"></i>
+        </div>
+      </div>
+    
+    <!-- audio end  -->
     </div>
     <!-- BOOTSTRAP JS  -->
 
